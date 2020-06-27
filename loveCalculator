@@ -1,0 +1,24 @@
+function loveCalculator() {
+  var you = prompt("What is your name?");
+  var them = prompt("What is their name?");
+  
+  var n = Math.random();
+  n = (n * 100) + 1;
+  n = Math.floor(n);
+  
+  if (n === 100) {
+    alert(`${you} & ${them}, your love percentage is ${n}%! You love each other like Kanye loves Kanye.`);
+  } if (n <= 99 && n >= 75) {
+    alert(`${you} & ${them}, your love percentage is ${n}%! We predict smooth sailing for you and your love.`);
+  } if (n <= 74 && n >= 50) {
+    alert(`${you} & ${them}, your love percentage is ${n}%! You have a decent chance at making it. Make sure to communicate and make time for each other.`);
+  } if (n <= 49 && n >= 30) {
+    alert(`${you} & ${them}, your love percentage is ${n}%! We have to be honest, it doesn't look good. You might want to try being friends first.`);
+  } if (n < 30) {
+      alert(`Oh no, ${you} & ${them}, your love percentage is ${n}%! Run. Run away NOW.`);
+  }
+}
+
+
+loveCalculator();
+
