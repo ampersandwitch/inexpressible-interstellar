@@ -1,0 +1,21 @@
+
+function bmiCalculator(w,h) {
+
+var weight= prompt("What is your weight?");
+var height= prompt("What is your height?");
+
+var bmi = Math.floor(weight / Math.pow(height, 2));
+
+if (bmi < 18.5) {
+    alert(`Your BMI is ${bmi}, so you are underweight.`);
+}
+if (bmi > 18.5 && bmi < 24.9) {
+    alert(`Your BMI is ${bmi}, so you have a normal weight.`);
+}
+if (bmi > 24.9) {
+    alert(`Your BMI is ${bmi}, so you are overweight.`);
+
+}
+}
+
+bmiCalculator();
