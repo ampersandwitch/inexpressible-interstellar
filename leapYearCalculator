@@ -1,0 +1,21 @@
+
+//A year is a leap year if it is evenly divisible by 4;
+//Except if that year is also equally divisible by 100;
+//Unless that year is also evenly divisible by 400;
+
+
+function isLeap(year) {
+ 
+    if (year % 4 !== 0) {
+        return("Not leap year.");
+    } else if (year % 100 !== 0) {
+        return("Leap year.");
+    } else if (year % 400 !== 0) {
+        return("Not leap year.");
+    } else {
+        return("Leap year.");
+    }
+
+}
+
+isLeap();
