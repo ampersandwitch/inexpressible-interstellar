@@ -12,10 +12,7 @@ function isLeap(year) {
         return("Leap year.");
     } else if (year % 400 !== 0) {
         return("Not leap year.");
-    } else {
-        return("Leap year.");
     }
-
 }
 
 isLeap();
