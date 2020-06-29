@@ -1,0 +1,15 @@
+
+
+var guestList = ["Quentin Coldwater", "Alice Quinn", "Dean Fogg", "Julia Wicker", "Eliot Waugh"];
+
+function checkGuestList(name) {
+  var name = prompt("What is your name?");
+  
+  if (guestList.includes(name) === true) {
+    alert("Welcome, " + name);
+  } else {
+    alert("Better luck next time.");
+  }
+}
+
+// checkGuestList();
