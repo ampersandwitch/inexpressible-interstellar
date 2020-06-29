@@ -1,0 +1,10 @@
+let names = ["Quentin Coldwater", "Alice Quinn", "Julia Wicker", "Dean Fogg", "Margo Hansen", "Eliot Waugh"];
+
+function whosPaying(name) {
+  let numberOfPeople = names.length;
+  let randomPersonPosition = Math.floor(Math.random() * numberOfPeople);
+  let randomPerson = names[randomPersonPosition];
+  return(randomPerson + " is buying lunch today!");
+}
+
+whosPaying();
