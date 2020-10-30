@@ -1,0 +1,20 @@
+function mutation(arr) {
+  let item1 = arr[0].toLowerCase().split("");
+  let item2 = arr[1].toLowerCase().split("")
+  let count = 0;
+
+  console.log(item1);
+  console.log(item2);
+
+    for (var i =0; i < item2.length; i++) {
+        if(item1.indexOf(item2[i]) > -1 ) {
+            count++;
+        }
+    }
+
+    if (count == item2.length) {
+      return true;
+    } return false;
+  }
+
+mutation(["zyxwvutsrqponmlkjihgfedcba", "qrstu"]);
