@@ -1,0 +1,16 @@
+function getIndexToIns(arr, num) {
+
+  let sortedArr = arr.sort();
+  let times = sortedArr.length;
+  let count = 0;
+
+  console.log(sortedArr, num);
+
+  for (let i = 0; i < times; i++) {
+    if (num > sortedArr[i]) {
+      count++;
+    } 
+   } return count;
+}
+
+getIndexToIns([40, 60], 80)
