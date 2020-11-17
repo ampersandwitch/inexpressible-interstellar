@@ -1,0 +1,23 @@
+const squareList = (arr) => {
+  // Only change code below this line
+  let numbers = arr.filter(function(n) {
+    if (n > 0) {
+      return n;
+    }
+  })
+  let wholeNumbers = numbers.filter(function(n) {
+    if (Number.isInteger(n) === true) {
+      return n;
+    }
+  });
+
+  let square = wholeNumbers.map(function(n) {
+    return n * n;
+  })
+
+  return square;
+  // Only change code above this line
+};
+
+const squaredIntegers = squareList([-3, 4.8, 5, 3, -3.2]);
+console.log(squaredIntegers);
