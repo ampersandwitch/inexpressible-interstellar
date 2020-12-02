@@ -1,17 +1,13 @@
 function myReplace(str, before, after) {
   let upperCase = /^([A-Z])/g;
-  // console.log(upperCase.test(before))
   if (upperCase.test(before)) {
-    // let upper = after.split("")
     let firstLetterCaps = after.charAt(0).toUpperCase() + after.slice(1);
     return str.replace(before, firstLetterCaps);
   } 
   if (upperCase.test(before) === false) {
-    // let lower = after.split("")
     let firstLetterLower = after.charAt(0).toLowerCase() + after.slice(1);
     return str.replace(before, firstLetterLower);
   }
 }
 
-let result = myReplace("I think we should look up there", "up", "Down")
-console.log(result);
+myReplace("I think we should look up there", "up", "Down")
