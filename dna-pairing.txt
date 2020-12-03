@@ -1,0 +1,27 @@
+function pairElement(str) {
+  let newArr = [];
+
+  let basePairs = function(char) {
+    switch(char) {
+  case 'A':
+    newArr.push(["A","T"]);
+    break;
+  case 'T':
+    newArr.push(["T","A"]);
+    break;
+  case 'C':
+    newArr.push(["C","G"]);
+    break;
+  case 'G':
+    newArr.push(["G","C"]);
+    break;
+  } 
+}
+ for (let i = 0; i < str.length; i++) {
+   basePairs(str[i]);
+ }
+ return newArr;
+}
+
+
+pairElement("ATCGA")
