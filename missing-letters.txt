@@ -1,0 +1,14 @@
+function fearNotLetter(str) {
+  let alphabet = "abcdefghijklmnopqrstuvwxyz";
+  let startingPoint = alphabet.indexOf(str[0]);
+  let targetAlphabet = alphabet.slice(startingPoint);
+
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] != targetAlphabet[i]) {
+      return targetAlphabet[i];
+    }
+  }
+}
+
+let result = fearNotLetter("stvwx");
+console.log(result)
