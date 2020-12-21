@@ -1,0 +1,31 @@
+function addTogether() {
+  let firstArgument = arguments[0];
+
+  if (arguments.length > 1) {
+    let secondArgument = arguments[1];
+    return checkArgumentsAndAddIfValid(firstArgument, secondArgument);
+  }
+  else if (arguments.length === 1) {
+    if (checkArgument(firstArgument) === undefined) {
+      return undefined;
+    } else {
+    return function(secondArgument) {
+      return checkArgumentsAndAddIfValid(firstArgument, secondArgument);
+      }
+    }
+  }
+}
+
+function checkArgument(argument) {
+  if (Number.isInteger(argument) === true) {
+    return argument;
+  } return undefined;
+}
+
+function checkArgumentsAndAddIfValid(first, second) {
+   if (checkArgument(first) && checkArgument(second)) {
+    return first + second;
+   }
+}
+
+console.log(addTogether(2)(8));
