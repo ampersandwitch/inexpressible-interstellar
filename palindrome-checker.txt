@@ -1,0 +1,16 @@
+function palindrome(str) {
+  let inboundString = str.toLowerCase().replace(/[^0-9a-z]/gi, '');
+  let copiedString = str.toLowerCase().replace(/[^0-9a-z]/gi, '');
+
+  let newString = copiedString.split("")
+  let backward = newString.reverse().join("");
+  
+  if (inboundString === backward) {
+    return true;
+  } return false
+
+}
+
+
+let result = palindrome("not a palindrome");
+console.log(result);
