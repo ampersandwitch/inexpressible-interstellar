@@ -1,0 +1,18 @@
+function rot13(str) {
+  let decipher = "";
+  let alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  let space = " ";
+
+  for (let i = 0; i < str.length; i++) {
+    if (alphabet.includes(str[i]) || space.includes(str[i])) {
+    decipher += String.fromCharCode((str.charCodeAt(i) + 13 - 65) % 26 + 65).replace("-", ' ');;
+    } 
+    else decipher += String.fromCharCode(str.charCodeAt(i));
+    
+  }
+
+  return decipher;
+}
+
+let result = rot13("SERR CVMMN!");
+console.log(result);
